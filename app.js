@@ -15,7 +15,8 @@ const SeminarFetch4=mongoose.model('seminarModel');
 
 const seminar=require('./cms-js/seminar');
 const seminar_for_user=require('./seminar.js');
-
+const mongoURI='mongodb://admin:admin123@ds027739.mlab.com:27739/egaming-development';
+const devURI='mongodb://localhost/seminar'
 //Mongoose connection
 mongoose.connect('mongodb://admin:admin123@ds027739.mlab.com:27739/egaming-development', {useNewUrlParser: true});
 var db = mongoose.connection;
@@ -51,6 +52,6 @@ app.get('/', function (req, res) {
 //Defining Routes
 app.use('/cms/seminar',seminar);
 app.use('/seminar',seminar_for_user);
-app.listen(process,()=>{
+app.listen(port,()=>{
   console.log('server is working on port 3000');
 });
