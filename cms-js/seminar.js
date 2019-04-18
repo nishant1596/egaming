@@ -24,7 +24,7 @@ router.delete('/:id',(req,res)=>{
   Seminar.deleteOne({_id:req.params.id})
   .then(deletingSeminar=>{
     console.log('deleted from mongodb');
-    res.redirect('/')
+    res.redirect('/');
   })
 })
 

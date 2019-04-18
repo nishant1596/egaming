@@ -1,3 +1,7 @@
+/*
+This app will run on port 5000
+node app.js
+*/
 const express = require('express');
 const exphbs  = require('express-handlebars');
 const fs = require('fs');
@@ -15,10 +19,20 @@ const SeminarFetch4=mongoose.model('seminarModel');
 
 const seminar=require('./cms-js/seminar');
 const seminar_for_user=require('./seminar.js');
-const mongoURI='mongodb://admin:admin123@ds027739.mlab.com:27739/egaming-development';
-const devURI='mongodb://localhost/seminar'
+
 //Mongoose connection
-mongoose.connect('mongodb://admin:admin123@ds027739.mlab.com:27739/egaming-development', {useNewUrlParser: true});
+
+// ############################ NOTE ##########################
+// Use this mongoURI when connecting to mongolab (heroku deployment)
+const mongoURI='mongodb://admin:admin123@ds027739.mlab.com:27739/egaming-development';
+
+
+// ############################ NOTE ##########################
+// Use this devURI when connecting to mongodb
+const devURI='mongodb://localhost/seminar'
+
+
+mongoose.connect(devURI, {useNewUrlParser: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'database connection error:'));
 db.once('open', function() {
@@ -53,5 +67,5 @@ app.get('/', function (req, res) {
 app.use('/cms/seminar',seminar);
 app.use('/seminar',seminar_for_user);
 app.listen(port,()=>{
-  console.log('server is working on port 3000');
+  console.log(`server is working on port ${port}`);
 });
