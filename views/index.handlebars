@@ -1,0 +1,139 @@
+<!-- Front page content view 1-->
+
+<div class="container" style="">
+  <div class="center">
+    <div class="">
+      <img src="icons/background1.png" class="e-gaming-logo">
+    </div>
+    <div class="">
+      <p id="home-gif"></p>
+    </div>
+    <div class="">
+      <img src="icons/gamepad.png" class="e-gaming-image"><br>
+      <a href="#section2" class="btn-floating white pulse">
+      </a>
+    </div>
+
+
+
+    <!-- <div class="scroll-down-icon" id="scroll-down-icon">
+    <a href="#ask-question-title" class="btn btn-floating"><i class="material-icons">expand_more</i></a>
+    </div> -->
+
+  </div>
+</div>
+</div>
+
+
+<!--Second section starts -->
+  <div class="container-fluid" style="background-color:white;padding-top:50px;min-height:100vh;" id="section2">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title" id="seminars">
+          Seminars <br>  <img src="icons/swords.png" height="50px" width="50px" alt="">
+        </div>
+        <div class="">
+
+        </div>
+      </div>
+    </div>
+    <!-- Cards starting for seminars -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col s12 m3">
+          <div class="card z-depth-5">
+            <div class="card-image">
+              <img src="icons/cs.jpg" height="200px" >
+              <span class="card-title">Seminar on  Counter Strike</span>
+              <a class="btn-floating halfway-fab waves-effect waves-light red" href="seminars.html"><i class="material-icons">arrow_right_alt</i></a>
+            </div>
+            <div class="card-content">
+              <span><i class="material-icons">location_on</i></span><span class="seminar_location">Kochi</span>
+              <span>&nbsp;</span>
+              <span><i class="material-icons">date_range</i></span> <span class="seminar_date">22/04/2019</span>
+            </div>
+          </div>
+        </div>
+
+  <div class="col s12 m3">
+    <div class="card z-depth-5">
+      <div class="card-image">
+        <img src="icons/pubg.jpg" height="200px">
+        <span class="card-title">Seminar on Pubg</span>
+        <a class="btn-floating halfway-fab waves-effect waves-light red" href="seminars.html"><i class="material-icons">arrow_right_alt</i></a>
+      </div>
+      <div class="card-content">
+        <span><i class="material-icons">location_on</i></span><span class="seminar_location">Mumbai</span>
+        <span>&nbsp;</span>
+        <span><i class="material-icons">date_range</i></span> <span class="seminar_date">11/05/2019</span>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="col s12 m3">
+    <div class="card z-depth-5">
+      <div class="card-image">
+        <img src="icons/pop.jpg" height="200px">
+        <span class="card-title">Seminar on Prince of Persia : The forgotten Sand</span>
+        <a class="btn-floating halfway-fab waves-effect waves-light red" href="seminars.html"><i class="material-icons">arrow_right_alt</i></a>
+      </div>
+      <div class="card-content">
+        <span><i class="material-icons">location_on</i></span><span class="seminar_location">Delhi</span>
+        <span>&nbsp;</span>
+        <span><i class="material-icons">date_range</i></span> <span class="seminar_date">19/04/2019</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s12 m3">
+    <div class="card z-depth-5">
+      <div class="card-image">
+        <img src="icons/cod.jpg" height="200px">
+        <span class="card-title">Seminar on Call of Duty</span>
+        <a class="btn-floating halfway-fab waves-effect waves-light red" href="seminars.html"><i class="material-icons">arrow_right_alt</i></a>
+      </div>
+      <div class="card-content">
+        <span><i class="material-icons">location_on</i></span><span class="seminar_location">Chennai</span>
+        <span>&nbsp;</span>
+        <span><i class="material-icons">date_range</i></span> <span class="seminar_date">09/05/2019</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  {{#each seminarfetched4}}
+
+  <div class="col s12 m3">
+    <div class="card z-depth-5">
+      <div class="card-image">
+        <img src="./uploads/{{seminar_image}}" height="200px">
+        <span class="card-title">{{seminar_title}}</span>
+        <a class="btn-floating halfway-fab waves-effect waves-light red" href="seminars.html"><i class="material-icons">arrow_right_alt</i></a>
+      </div>
+      <div class="card-content">
+        <span><i class="material-icons">location_on</i></span><span class="seminar_location">{{seminar_city}}</span>
+        <span>&nbsp;</span>
+        <span><i class="material-icons">date_range</i></span> <span class="seminar_date">{{seminar_date}}</span>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+<div class="container center">
+  <div class="chip">
+    <a href="/seminars">
+      <img src="icons/right.png" height="10px" alt="">
+      See all seminars
+    </a>
+  </div>
+</div>
+    </div>
+
+
+    <!-- Cards finishing for seminar -->
+</div>
+
+<!-- Second section finishes -->

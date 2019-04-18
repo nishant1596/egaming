@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="title" id="seminars">
+        Seminars <br>  <img src="icons/swords.png" height="50px" width="50px" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    {{#if seminar}}
+    {{#each seminar}}
+    <div class="col s12 m3">
+      <div class="card z-depth-5">
+        <div class="card-image">
+          <img src="./uploads/{{seminar_image}}" height="200px" >
+          <span class="card-title">{{seminar_title}}</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red" href="/:id"><i class="material-icons">arrow_right_alt</i></a>
+        </div>
+        <div class="card-content">
+          <span><i class="material-icons">location_on</i></span><span class="seminar_location">{{seminar_city}}</span>
+          <span>&nbsp;</span>
+          <span><i class="material-icons">date_range</i></span> <span class="seminar_date">{{seminar_date}}</span>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+
+    {{else}}
+    <div class="center" style="color:white;font-weight:bold;font-size:50px">
+      No Seminars
+    </div>
+    {{/if}}
+
+</div>
+</div>
